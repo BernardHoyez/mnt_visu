@@ -1,12 +1,12 @@
-const CACHE_NAME = 'mnt_visu-cache-v2'; // à incrémenter à chaque livraison touchant un fichier statique
+const CACHE_NAME = 'mnt_visu-cache-v3'; // à incrémenter à chaque livraison touchant un fichier statique
 
 // Fichiers de l'app : network-first (jamais de version obsolète quand il y a du réseau)
-const APP_FILES = ['./', './index.html', './style.css', './app.js', './manifest.json']
+const APP_FILES = ['./', './index.html', './style.css', './app.js', './export.js', './manifest.json']
   .map((p) => new URL(p, self.location).href);
 // Fichiers stables : cache-first
 const STATIC_FILES = [
   './icon-192.png', './icon-512.png',
-  './vendor/leaflet/leaflet.js', './vendor/leaflet/leaflet.css',
+  './vendor/sqljs/sql-wasm.js', './vendor/sqljs/sql-wasm.wasm', './vendor/leaflet/leaflet.js', './vendor/leaflet/leaflet.css',
   './vendor/leaflet/images/layers.png', './vendor/leaflet/images/layers-2x.png',
   './vendor/leaflet/images/marker-icon.png', './vendor/leaflet/images/marker-icon-2x.png',
   './vendor/leaflet/images/marker-shadow.png'

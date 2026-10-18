@@ -1,5 +1,5 @@
 'use strict';
-const APP_VERSION = 'v2';
+const APP_VERSION = 'v3';
 const ORIGIN = 20037508.342789244, WORLD = ORIGIN * 2;
 const T = 256, N = 258, NODATA = -1000;
 const WMS = 'https://data.geopf.fr/wms-r/wms';

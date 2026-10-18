@@ -20,3 +20,9 @@ output{opacity:.75;font-variant-numeric:tabular-nums}
 button#reset{width:100%;margin-top:4px;padding:7px;border:1px solid var(--bd);border-radius:6px;background:#2a3d34;color:var(--fg)}
 #status{font-size:12px;opacity:.8;min-height:1.4em;margin-top:4px}
 .leaflet-popup-content{margin:8px 12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:4px 0}
+.two input{width:100%;background:#2a3d34;color:var(--fg);border:1px solid var(--bd);border-radius:6px;padding:6px}
+#expInfo{font-size:12px;opacity:.85;margin:6px 0}
+progress{width:100%}
+#exp button{width:100%;margin-top:6px;padding:8px;border:1px solid var(--bd);border-radius:6px;background:#2f6f4e;color:#fff}
+#exp button:disabled{opacity:.5}
