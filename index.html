@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1d2b24">
+<title>mnt_visu — Visualiseur MNT IGN</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="map"></div>
+
+<button id="toggle" aria-label="Afficher/masquer le panneau">☰</button>
+<aside id="panel">
+  <h1>mnt_visu <small id="ver"></small></h1>
+
+  <label class="row">Fond de carte
+    <select id="base">
+      <option value="ortho">IGN BD ORTHO®</option>
+      <option value="plan">IGN Plan V2</option>
+      <option value="osm">OpenStreetMap</option>
+    </select>
+  </label>
+
+  <fieldset>
+    <legend><label><input type="checkbox" id="demOn" checked> MNT IGN</label></legend>
+    <label class="row">Source
+      <select id="source">
+        <option value="alti">RGE ALTI® 1 m</option>
+        <option value="lidar">MNT LiDAR HD (brut, expérimental)</option>
+      </select>
+    </label>
+    <div class="modes">
+      <label><input type="radio" name="mode" value="gray"> Gris</label>
+      <label><input type="radio" name="mode" value="hill"> Ombrage</label>
+      <label><input type="radio" name="mode" value="hypso"> Hypsométrie</label>
+    </div>
+    <label class="row">Opacité <output id="o-opacity"></output>
+      <input type="range" id="opacity" min="0" max="100" step="1"></label>
+    <label class="row">Contraste <output id="o-contrast"></output>
+      <input type="range" id="contrast" min="40" max="250" step="1"></label>
+    <label class="row">Luminosité <output id="o-brightness"></output>
+      <input type="range" id="brightness" min="40" max="250" step="1"></label>
+    <div id="hillOpts">
+      <label class="row">Azimut soleil <output id="o-azimuth"></output>
+        <input type="range" id="azimuth" min="0" max="359" step="1"></label>
+      <label class="row">Exagération verticale <output id="o-exag"></output>
+        <input type="range" id="exag" min="1" max="10" step="0.5"></label>
+    </div>
+    <div id="legend" hidden>
+      <div id="bar"></div>
+      <div class="lg"><span id="lmin"></span><span id="lmax"></span></div>
+    </div>
+    <button id="reset" type="button">Réinitialiser les réglages</button>
+  </fieldset>
+  <div id="status" role="status"></div>
+</aside>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
