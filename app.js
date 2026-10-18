@@ -1,13 +1,13 @@
 'use strict';
-const APP_VERSION = 'v1';
+const APP_VERSION = 'v2';
 const ORIGIN = 20037508.342789244, WORLD = ORIGIN * 2;
 const T = 256, N = 258, NODATA = -1000;
 const WMS = 'https://data.geopf.fr/wms-r/wms';
 const SOURCES = {
   alti:  'ELEVATION.ELEVATIONGRIDCOVERAGE.HIGHRES',
-  lidar: 'IGNF_LIDAR-HD_MNT_ELEVATION.ELEVATIONGRIDCOVERAGE'
+  lidar: 'IGNF_LIDAR-HD_MNT_ELEVATION.ELEVATIONGRIDCOVERAGE.LAMB93'
 };
-const DEFAULTS = { base: 'ortho', dem: true, mode: 'hill', source: 'alti',
+const DEFAULTS = { base: 'ortho', dem: true, mode: 'hill', source: 'lidar',
   opacity: 70, contrast: 100, brightness: 100, azimuth: 315, exag: 1 };
 
 const $ = (s) => document.querySelector(s);

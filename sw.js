@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mnt_visu-cache-v1'; // à incrémenter à chaque livraison touchant un fichier statique
+const CACHE_NAME = 'mnt_visu-cache-v2'; // à incrémenter à chaque livraison touchant un fichier statique
 
 // Fichiers de l'app : network-first (jamais de version obsolète quand il y a du réseau)
 const APP_FILES = ['./', './index.html', './style.css', './app.js', './manifest.json']
